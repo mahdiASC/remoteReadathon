@@ -7,7 +7,42 @@
     <title>remoteReadathon</title>
 </head>
 <body>
+    <!--MAIN CONTENT-->
+    <select id = "allIDs" class="selectpicker" data-style="btn-primary">
+        <!--<option>Mustard</option>-->
+    </select>
+
+    <!--search button-->
+    <!--<a href="#" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-search"></span> Search</a>-->
+    <button class="button" onclick="mySearch()" style="vertical-align:middle"><span class="glyphicon glyphicon-search">Search</span></button>
+
+    <!--paragraphs-->
+    <div id="paras" class="container">
+
+    </div>
+
+    <!--END OF MAIN CONTENT-->
+
+
+
+
+    <!--jquery-->
     <script src="lib/js/jquery-3.1.0.js"></script>
-    <script src="main.js"></script>
+
+    <!--Bootstrap-->
+    <script src="lib/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/css/bootstrap-theme.css">
+
+    <!--Normalize-->
+    <link rel="stylesheet" href="lib/css/normalize.css">
+
+    <!--modernizr-->
+    <script src = "lib/js/modernizr.js"></script>
+
+    <!--main files-->
+    <script src="airtable.js-master/build/airtable.browser.js"></script>
+    <script src="lib/js/main.js"></script>
+    <link rel="stylesheet" href="lib/css/main.css">
 </body>
 </html>
