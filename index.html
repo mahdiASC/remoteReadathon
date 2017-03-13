@@ -8,21 +8,45 @@
 </head>
 <body>
     <!--MAIN CONTENT-->
-    <div id="selector">
+
+
+	<!-- user ID -->
+	<div id="userID">
+		<label for="text-input" class="col-2 col-form-label">User ID</label>
+		<div class="col-10">
+			<input class="form-control" type="text" placeholder="12345" id="text-input">
+		</div>
+	    <button class="button" onclick="myID()" style="vertical-align:middle"><span class="glyphicon glyphicon-ok-sign">Start Reading!</span></button>
+	</div>
+	<!-- end of user ID -->
+
+	<!-- User main menu -->
+	<div id = "userMenu" class="hidden">
+	    <button class="button" onclick="nextStud()" style="vertical-align:middle"><span class="glyphicon glyphicon-chevron-right">Next Student</span></button>
+	    <button class="button" onclick="goBack()" style="vertical-align:middle"><span class="glyphicon glyphicon-step-backward">I'm done!</span></button>
+	    <button class="button" onclick="problem()" style="vertical-align:middle"><span class="glyphicon glyphicon-wrench">Troubleshoot</span></button>
+	</div>
+
+	<!-- end of user menu -->
+
+	<!-- Troubleshooting -->
+    <div id="selector" class="hidden">
         <select id = "allIDs" class="selectpicker" data-style="btn-primary">
         <!--<option>Mustard</option>-->
     </select>
-
     <!--search button-->
-    <!--<a href="#" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-search"></span> Search</a>-->
     <button class="button" onclick="mySearch()" style="vertical-align:middle"><span class="glyphicon glyphicon-search">Search</span></button>
+    <!-- end of troubleshooting -->
+
+
     </div>
-    
+    <!-- end of search button -->
 
     <!--paragraphs-->
-    <div id="paras" class="container">
+    <div id="paras" class="container hidden">
 
     </div>
+	<!-- end of paragraphs -->
 
     <!--SUBMISSION-->
     <div id="input" class="hidden">
@@ -30,17 +54,12 @@
             <option>0</option>
             <option>1</option>
             <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
         </select>
         <button class="button" onclick="enterData()" style="vertical-align:middle"><span>Input</span></button>
     </div>
+	<!-- end of SUBMISSION -->
 
     <!--END OF MAIN CONTENT-->
-
-
-
 
     <!--jquery-->
     <script src="lib/js/jquery-3.1.0.js"></script>
