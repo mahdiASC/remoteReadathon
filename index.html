@@ -26,8 +26,16 @@
             <!--Will be filled via jQuery with user specific stats-->
             <!--number user has done-->
             <p id="userTotal"></p>
+            <!--growing list of previous students graded-->
+            <p id="studentList">
+                <h3>Students you've read so far:</h3>
+                <ul class="list-group">
+                </ul>
+            </p>
             <!--number of total apps completed by all-->
+            <h3>Total Readathon Effort:</h3>
             <p id="readathonStat"></p>
+
         </div>
 	    <button id = "but1" class="button hidden" onclick="getRandStudent()" style="vertical-align:middle"><span class="glyphicon glyphicon-chevron-right">Next Student</span></button>
 	    <button id = "but2" class="button hidden" onclick="goBack()" style="vertical-align:middle"><span class="glyphicon glyphicon-step-backward">I'm done!</span></button>
