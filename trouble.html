@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--MAIN CONTENT-->
+    <!--Link to airtable directly
+    Check on user
+        -how many has user done?
+        -how many holds for user?
+        -which students have user finished?
+    Hold for user
+        -input data on hold-->
+
+    <!--direct link to airtable-->
+    <a href="https://airtable.com/tblBIIMyz5Kwmz8Rd/viwLcXwbIHqdWTCy5" target= "_blank">Direct Link to airtable</a>
+
+    <!--TICKER OF CONSTANT UPDATE OF PERCENTAGE-->
+    <h1>PERCENTAGE OF TOTAL COMPLETE</h1>
+    <h2 id="totalPerc">?.??% done!</h2>
+    <hr>
+    <!--Clear button-->
+    <br>
+    <button id = 'reset' class="button" onclick="reset()" style="vertical-align:middle">Reset!</button>
+    <!--CHECK ON USER-->
+    <h1>Check on user</h1>
+    <div class="input-group" style="width:50%">
+      <input type="text" class="form-control" placeholder="User ID #">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" id = "checkUser" onclick="findUser()" type="button">Find User</button>
+      </span>
+    </div>
+    <h3>Finished reads</h3>
+    <div id="userReads">
+        <!--Will be populated by users info-->
+    </div>
+    <hr>
+
+    <!--PUT NUMBER OF HOLDS FOR USER - ouputs those holds-->
+    <h3>Reads current on hold</h3>
+    <div id="holds">
+        <!--Will be populated by users current holds-->
+    </div>
+    <hr>
+    <!--INPUT DATA FOR HOLDS-->
+    <h2>Reserving student app holds. Input number of random holds desired. Holds will automatically reserve spots</h2>
+    <div class="input-group" style="width:50%">
+      <input type="text" class="form-control" placeholder="Number of holds wanted">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" id = "getHolds" onclick="getHolds()" type="button">Get List of holds</button>
+      </span>
+    </div>
+
+
+    <!--END OF MAIN CONTENT-->
+
+    <!--jquery-->
+    <script src="lib/js/jquery-3.1.0.js"></script>
+
+    <!--Bootstrap-->
+    <script src="lib/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/css/bootstrap-theme.css">
+
+    <!--Normalize-->
+    <link rel="stylesheet" href="lib/css/normalize.css">
+
+    <!--modernizr-->
+    <script src = "lib/js/modernizr.js"></script>
+
+    <!--loading plugin-->
+    <!--http://www.jqueryscript.net/loading/jQuery-Plugin-To-Handle-CSS3-Powered-Spinners-Loaders-Loading-js.html-->
+    <script src="lib/js/jquery.loading.min.js"></script>
+    <script src="lib/js/loading.min.js"></script>
+
+    <link rel="stylesheet" href="lib/css/loading.min.css">
+
+    <!--main files-->
+    <script src="airtable.js-master/build/airtable.browser.js"></script>
+    <script src="lib/js/trouble.js"></script>
+    <link rel="stylesheet" href="lib/css/trouble.css">
+</body>
+</html>
