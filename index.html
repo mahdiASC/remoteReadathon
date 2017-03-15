@@ -12,6 +12,10 @@
 
 	<!-- user ID -->
 	<div id="userID">
+
+        <!--number of total apps completed by all-->
+        <h3>Total Readathon Effort:</h3>
+        <p id="readathonStat"></p>
 		<label for="text-input" class="col-2 col-form-label">User ID</label>
 		<div class="col-10">
 			<input class="form-control" type="text" placeholder="12345" id="text-input">
@@ -29,13 +33,12 @@
             <!--growing list of previous students graded-->
             <p id="studentList">
                 <h3>Students you've read so far:</h3>
-                <ul class="list-group">
+                <ul id="priorReads" class="list-group">
+                </ul>
+                <h3>Students you have on hold:</h3>
+                <ul id="priorHolds" class="list-group">
                 </ul>
             </p>
-            <!--number of total apps completed by all-->
-            <h3>Total Readathon Effort:</h3>
-            <p id="readathonStat"></p>
-
         </div>
 	    <button id = "but1" class="button hidden" onclick="getRandStudent()" style="vertical-align:middle"><span class="glyphicon glyphicon-chevron-right">Next Student</span></button>
 	    <button id = "but2" class="button hidden" onclick="goBack()" style="vertical-align:middle"><span class="glyphicon glyphicon-step-backward">I'm done!</span></button>
