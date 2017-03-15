@@ -8,13 +8,8 @@
 </head>
 <body>
     <!--MAIN CONTENT-->
-    <!--Link to airtable directly
-    Check on user
-        -how many has user done?
-        -how many holds for user?
-        -which students have user finished?
-    Hold for user
-        -input data on hold-->
+
+    <!--ALLOW DIRECT VIEW OF STUDENT BY ID-->
 
     <!--direct link to airtable-->
     <a href="https://airtable.com/tblBIIMyz5Kwmz8Rd/viwLcXwbIHqdWTCy5" target= "_blank">Direct Link to airtable</a>
@@ -29,30 +24,33 @@
     <!--CHECK ON USER-->
     <h1>Check on user</h1>
     <div class="input-group" style="width:50%">
-      <input type="text" class="form-control" placeholder="User ID #">
+      <input type="text" id = "checkUser" class="form-control" placeholder="User ID #">
       <span class="input-group-btn">
-        <button class="btn btn-secondary" id = "checkUser" onclick="findUser()" type="button">Find User</button>
+        <button class="btn btn-secondary" onclick="findUser()" type="button">Find User</button>
       </span>
     </div>
+    <h1>Current User: <span id="currentUser"></span></h1>
     <h3>Finished reads</h3>
     <div id="userReads">
         <!--Will be populated by users info-->
     </div>
     <hr>
 
-    <!--PUT NUMBER OF HOLDS FOR USER - ouputs those holds-->
+    <!-- HOLDS FOR USER - ouputs those holds-->
     <h3>Reads current on hold</h3>
     <div id="holds">
         <!--Will be populated by users current holds-->
     </div>
     <hr>
     <!--INPUT DATA FOR HOLDS-->
-    <h2>Reserving student app holds. Input number of random holds desired. Holds will automatically reserve spots</h2>
-    <div class="input-group" style="width:50%">
-      <input type="text" class="form-control" placeholder="Number of holds wanted">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" id = "getHolds" onclick="getHolds()" type="button">Get List of holds</button>
-      </span>
+    <div id='holdInput' class="input-group hidden" style="width:50%">
+    <h3>Reserve a student app. Holds will automatically reserve spot for later data entry.</h3>
+        <button class="btn btn-secondary" id = "getHolds" onclick="makeHold()" type="button">Get hold</button>
+        <br>
+        <h4>Newly held student apps:</h4>
+        <div id="addingHolds">
+            <!--Will be populated with student IDs (temp)-->
+        </div>
     </div>
 
 
