@@ -9,12 +9,25 @@
 <body>
     <!--MAIN CONTENT-->
 
-    <!--ALLOW DIRECT VIEW OF STUDENT BY ID-->
-    <!--ALLOW HOLD BY USER ID (For Alumni requirement) Use different numbering system-->
-
     <!--direct link to airtable-->
     <a href="https://airtable.com/tblBIIMyz5Kwmz8Rd/viwLcXwbIHqdWTCy5" target= "_blank">Direct Link to airtable</a>
 
+    <!--ALLOW DIRECT VIEW OF STUDENT BY ID-->
+    <h2>Read Student Directly</h2>
+    <div class="input-group" style="width:50%">
+      <input type="text" id = "readStudent" class="form-control" placeholder="Student ID #">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" onclick="readStudent()" type="button">Read Student</button>
+      </span>
+    </div>
+    <!-- Will contain read content -->
+    <div id="paras" class="container"></div>
+    <br>
+    <!--GENERATE RANDOM ALUMNI READ (not held)-->
+    <h2>Gen Alumni Read (not held)</h2>
+    <button onclick="genAlRead(this)">#######</button>
+
+    
     <!--TICKER OF CONSTANT UPDATE OF PERCENTAGE-->
     <h1>PERCENTAGE OF TOTAL COMPLETE</h1>
     <h2 id="totalPerc">?.??% done!</h2>
@@ -45,13 +58,24 @@
     <hr>
     <!--INPUT DATA FOR HOLDS-->
     <div id='holdInput' class="input-group hidden" style="width:50%">
-    <h3>Reserve a student app. Holds will automatically reserve spot for later data entry.</h3>
-        <button class="btn btn-secondary" id = "getHolds" onclick="makeHold()" type="button">Get hold</button>
+        <h3>Reserve a student app. Holds will automatically reserve spot for later data entry.</h3>
+        <button class="btn btn-secondary" id = "getHolds" onclick="makeHold()" type="button">Get random hold</button>
+        
+        <!--ALLOW HOLD BY USER ID (For Alumni requirement) Use different numbering system-->
+        <div class="input-group" style="width:50%">
+            <input type="text" id = "specHold" class="form-control" placeholder="Student ID #">
+            <span class="input-group-btn">
+                <button class="btn btn-secondary" onclick="makeSpecHold()" type="button">Get specific hold</button>
+            </span>
+        </div>
+        
+        
         <br>
         <h4>Newly held student apps:</h4>
         <div id="addingHolds">
             <!--Will be populated with student IDs (temp)-->
         </div>
+        
     </div>
 
 
