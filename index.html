@@ -7,7 +7,86 @@
     <title>remoteReadathon</title>
 </head>
 <body>
+    <!--MAIN CONTENT-->
+
+
+	<!-- user ID -->
+	<div id="userID">
+
+        <!--number of total apps completed by all-->
+        <h3>Total Readathon Effort:</h3>
+        <p id="readathonStat"></p>
+		<label for="text-input" class="col-2 col-form-label">User ID</label>
+		<div class="col-10">
+			<input class="form-control" type="text" placeholder="12345" id="text-input">
+		</div>
+	    <button class="button" onclick="myID()" style="vertical-align:middle"><span class="glyphicon glyphicon-ok-sign">Start Reading!</span></button>
+	</div>
+	<!-- end of user ID -->
+
+	<!-- User main menu -->
+	<div>
+        <div id="userStats" class="hidden">
+            <!--Will be filled via jQuery with user specific stats-->
+            <!--number user has done-->
+            <p id="userTotal"></p>
+            <!--growing list of previous students graded-->
+            <p id="studentList">
+                <h3>Students you've read so far:</h3>
+                <ul id="priorReads" class="list-group">
+                </ul>
+                <h3>Students you have on hold:</h3>
+                <ul id="priorHolds" class="list-group">
+                </ul>
+            </p>
+        </div>
+	    <button id = "but1" class="button hidden" onclick="getRandStudent()" style="vertical-align:middle"><span class="glyphicon glyphicon-chevron-right">Next Student</span></button>
+	    <button id = "but2" class="button hidden" onclick="goBack()" style="vertical-align:middle"><span class="glyphicon glyphicon-step-backward">I'm done!</span></button>
+	</div>
+
+	<!-- end of user menu -->    
+
+    <!--SUBMISSION-->
+    <div id="input" class="hidden">
+        <!--paragraphs-->
+        <div id="paras" class="container"></div>
+        <!-- end of paragraphs -->
+        <div class="form-group">
+            <label for="comments">Comments</label>
+            <textarea class="form-control" id="comments" rows="3"></textarea>
+        </div>
+        <select id="userData" class="selectpicker" data-style="btn-primary">
+            <option>0</option><option>1</option><option>2</option></select>
+        <button class="button" onclick="enterData()" style="vertical-align:middle"><span>Input</span></button>
+    </div>
+	<!-- end of SUBMISSION -->
+
+    <!--END OF MAIN CONTENT-->
+
+    <!--jquery-->
     <script src="lib/js/jquery-3.1.0.js"></script>
-    <script src="main.js"></script>
+
+    <!--Bootstrap-->
+    <script src="lib/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/css/bootstrap-theme.css">
+
+    <!--Normalize-->
+    <link rel="stylesheet" href="lib/css/normalize.css">
+
+    <!--modernizr-->
+    <script src = "lib/js/modernizr.js"></script>
+
+    <!--loading plugin-->
+    <!--http://www.jqueryscript.net/loading/jQuery-Plugin-To-Handle-CSS3-Powered-Spinners-Loaders-Loading-js.html-->
+    <script src="lib/js/jquery.loading.min.js"></script>
+    <script src="lib/js/loading.min.js"></script>
+
+    <link rel="stylesheet" href="lib/css/loading.min.css">
+
+    <!--main files-->
+    <script src="airtable.js-master/build/airtable.browser.js"></script>
+    <script src="lib/js/main.js"></script>
+    <link rel="stylesheet" href="lib/css/main.css">
 </body>
 </html>
