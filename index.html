@@ -5,28 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>remoteReadathon</title>
+	<!-- google web fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Poppins:500,700" rel="stylesheet">
 </head>
 <body>
     <!--MAIN CONTENT-->
-
+	<div class="container"><img src="lib/img/ASChorizontal.png" width="100%" style="margin-top:20px; margin-bottom:20px"></div>
 
 	<!-- user ID -->
 	<div id="userID">
-
+	<div class="container">
+		<img src="lib/img/collage.png" width="100%">
         <!--number of total apps completed by all-->
         <h3>Total Readathon Effort:</h3>
         <p id="readathonStat"></p>
 		<label for="text-input" class="col-2 col-form-label">User ID</label>
 		<div class="col-10">
-			<input class="form-control" type="text" placeholder="12345" id="text-input">
+			<input class="form-control" type="text" placeholder="Your User ID is a three-digit number starting with 1, provided by ASC staff." id="text-input">
 		</div>
-	    <button class="button" onclick="myID()" style="vertical-align:middle"><span class="glyphicon glyphicon-ok-sign">Start Reading!</span></button>
+	    <button class="button" onclick="myID()" style="vertical-align:middle">Start Reading!</button>
+	</div>
 	</div>
 	<!-- end of user ID -->
 
 	<!-- User main menu -->
-	<div>
+	<div class="container">
         <div id="userStats" class="hidden">
+			<h2>Check out our <a href="img/onepager.pdf">How-To Guide</a> for instructions on reading and scoring applicant essays.</h2>
             <!--Will be filled via jQuery with user specific stats-->
             <!--number user has done-->
             <p id="userTotal"></p>
@@ -35,13 +40,14 @@
                 <h3>Students you've read so far:</h3>
                 <ul id="priorReads" class="list-group">
                 </ul>
-                <h3>Students you have on hold:</h3>
+                <h3>Students you have on hold: <span class="glyphicon glyphicon-question-sign" id="showholdexplain"></span></h3> 
+				<div class="holdexplain" id="holdexplain">You may have students on hold if you requested paper copies of your readathon essays, or if you left the readathon page before submitting a student's score.</div>
                 <ul id="priorHolds" class="list-group">
                 </ul>
             </p>
         </div>
-	    <button id = "but1" class="button hidden" onclick="getRandStudent()" style="vertical-align:middle"><span class="glyphicon glyphicon-chevron-right">Next Student</span></button>
-	    <button id = "but2" class="button hidden" onclick="goBack()" style="vertical-align:middle"><span class="glyphicon glyphicon-step-backward">I'm done!</span></button>
+	    <button id = "but1" class="button hidden" onclick="getRandStudent()" style="vertical-align:middle">Next Student</button>
+	    <button id = "but2" class="button hidden" onclick="goBack()" style="vertical-align:middle">I'm done!</button>
 	</div>
 
 	<!-- end of user menu -->    
@@ -49,15 +55,37 @@
     <!--SUBMISSION-->
     <div id="input" class="hidden">
         <!--paragraphs-->
-        <div id="paras" class="container"></div>
+        <div id="paras" class="container essays"></div>
         <!-- end of paragraphs -->
+		<div class="container">
+		<h2>If you're unsure how to score essays or just want a refresher, check out our <a href="img/onepager.pdf">How-To Guide</a>.</h2>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-xs-6 thumb">
+				<label>Score:</label>
+				<form id="userData">
+					<input type="radio" name="score" value="0" onclick="scoremeaning(0)"> 0<br>
+					<input type="radio" name="score" value="1" onclick="scoremeaning(1)"> 1<br>
+					<input type="radio" name="score" value="2" onclick="scoremeaning(2)"> 2
+				</form>	
+			</div>
+			
+			<div class="col-lg-6 col-md-6 col-xs-6 thumb" id="scoremeaning">
+				
+			</div>
+			
+		</div>
+		
+		
+		
         <div class="form-group">
-            <label for="comments">Comments</label>
+            <label for="comments">Comments (OPTIONAL):</label>
             <textarea class="form-control" id="comments" rows="3"></textarea>
         </div>
-        <select id="userData" class="selectpicker" data-style="btn-primary">
-            <option>0</option><option>1</option><option>2</option></select>
-        <button class="button" onclick="enterData()" style="vertical-align:middle"><span>Input</span></button>
+        <!-- <select id="userData" class="selectpicker" data-style="btn-primary"> -->
+            <!-- <option>0</option><option>1</option><option>2</option></select> -->
+		
+        <button class="button" onclick="enterData()" style="vertical-align:middle">Input</button>
+		</div>
     </div>
 	<!-- end of SUBMISSION -->
 
