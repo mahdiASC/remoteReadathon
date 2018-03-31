@@ -51,8 +51,41 @@ h1,h2,h3,h4,h5{
 
 }
 
-.progress-bar{
+.progress-bar-container{
+    background-color: black;
+    width: 500px;
+    border: #51c1e9 solid 3px;
+    border-radius: 10px;
+}
 
+.progress-bar{
+    height: 30px;
+    background: linear-gradient(270deg, #51c1e9, #ffdd00);
+    background-size: 400% 400%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    -webkit-animation: progressAnim 10s ease infinite;
+    animation: progressAnim 10s ease infinite;    
+}
+
+@-webkit-keyframes progressAnim {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes progressAnim { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.progress-bar-container p{
+    text-align: right;
+    color: white;
+    position: relative;
+    height: 0;
+    top: -26px;
+    right: 5px;
 }
 
 .login-form-container{
@@ -142,6 +175,7 @@ h1,h2,h3,h4,h5{
     right:0;
     color:#51c1e9;
     transition: .5s;
+    cursor: pointer;
 }
 
 .right-info:hover,.right-info:focus {
