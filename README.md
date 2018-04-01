@@ -1,6 +1,7 @@
 # To Do List
 1. setup User to:
     1. Consider when user has no more to read (removing options?)
+    2. Fix getInfo() to work properly!
 2. setup Readathon to:
     1. 
 3. setup airtableInterface to :
