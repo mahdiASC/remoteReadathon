@@ -37,10 +37,13 @@ span{
 
 h1,h2,h3,h4,h5{
     margin:0;
-    font-family: 'Oswald', sans-serif;
-	color: #51c1e9;
+    letter-spacing: 1px;
 }
 
+h1,h2,h3,h4,h5,.popup-inner p.scoremeaninglabel,.popup-inner label[for='comment']{
+    color:#51c1e9;
+    font-family: 'Oswald', sans-serif;
+}
 /* MAIN CONTENT */
 .main-container{
 
@@ -135,9 +138,9 @@ header img{
 #userID{
     transition: .75s;
     width: 75px;
-    border-top: none;
-    border-right: none;
-    border-left: none;
+    border-top: solid #51c1e9 1px;
+    border-right: solid #51c1e9 1px;
+    border-left: solid #51c1e9 1px;
     border-bottom: solid #51c1e9 5px;
     outline: none;
     color: #51c1e9;
@@ -147,24 +150,38 @@ header img{
 }
 
 #startButton{
+    font-size: 22px;
+    padding: 20px;
+    width: 200px;    
+    margin-top: 15px;
+}
+.student-held-button{
+    font-size: 15px;
+    padding: 10px 20px;
+    width: 200px;
+    margin-top: 15px;    
+}
+
+.button-container button{
+    padding: 2px 20px;
+    width: 200px;
+    font-family: Oswald;
+    font-size: 1.5em;
+}
+#startButton, .student-held-button, .button-container button{
     display: inline-block;
     border-radius: 4px;
     background-color: #ffdd00;
     border: black solid 1px;
     color: rgb(44, 44, 44);
-    font-size: 22px;
-    padding: 20px;
-    width: 200px;
     transition: all 0.5s;
     cursor: pointer;
-    margin-top: 15px;
 }
 
-#startButton:hover, #startButton:focus{
+#startButton:hover, .student-held-button:hover, #startButton:focus, .student-held-button:focus, .button-container button:hover, .button-container button:focus{
     background-color: #51c1e9;
     color:white;
 }
-
 
 /* USER CONSOLE */
 .user-console-container{
@@ -191,10 +208,11 @@ header img{
     background-color: #51c1e9;
     border-radius: 25px;
     color: white;
-    padding: 100px 25px;
+    padding: 46px 25px;
     font-size: 2em;
+    line-height: 1.25em;
     width: 175px;
-    height: 95px;
+    height: fit-content;
     text-align: center;
 }
 
@@ -312,13 +330,21 @@ header img{
     /* border-radius:3px; */
 }
 .popup-inner h2{
-    text-shadow: 4px 4px 2px rgba(83, 142, 166, 0.5);
+    text-align: center;
 }
 
+.popup-inner div:first-child h2{
+    font-size: 2em;
+}
+.popup-inner div:not(:first-child) h2{
+    font-size: 1.25em;
+}
+    
 .popup-inner p{
     margin:0;
     text-align: left;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.3em;
 }
 
 .popup-inner span{
@@ -357,29 +383,72 @@ header img{
 
 /* STUDENT INFO */
 .student-info-container{
+    text-align: center;
+}
 
+.options{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px 20px;
 }
 .radio-container{
-
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.radio-button-container{
 }
 .explaination-container{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.form_div{
+    border-radius: 15px;
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+    padding-bottom: 5px;
+}
+#question{
+    font-weight: bold;
+    color: #51c1e9;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.popup-inner p.scoremeaning{
+    text-align: center;
+    font-style:italic;
 
 }
-.scoremeaninglabel{
 
+.popup-inner p.scoremeaninglabel{
+    text-align: center;
+    font-size: 1.2em;
 }
-.scoremeaning{
+.popup-inner label[for='comment']{
+    display:block;
+    text-align: left;
+    width:75%;
+    margin: 0 auto;
+}
 
-}
 #comment{
-
+    width:75%;
+    border: 2px solid #51c1e9;
+    padding: 5px;
+    resize: none;
+    color: black;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
 }
 .button-container{
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-.student-held-buton{
 
-}
 /* END OF STUDENT INFO */
 
 /* GUIDE */
