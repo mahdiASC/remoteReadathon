@@ -417,17 +417,17 @@ header img{
     font-size: 1.2em;
     margin-bottom: 10px;
 }
-.popup-inner p.scoremeaning{
+p.scoremeaning{
     text-align: center;
     font-style:italic;
 
 }
 
-.popup-inner p.scoremeaninglabel{
+p.scoremeaninglabel{
     text-align: center;
     font-size: 1.2em;
 }
-.popup-inner label[for='comment']{
+label[for='comment']{
     display:block;
     text-align: left;
     width:75%;
@@ -511,3 +511,27 @@ table li:before {
     font-family: 'Poppins', sans-serif;    
 }
 /* GUIDE END */
+
+/* CHECKBOXES */
+/* https://webdesign.tutsplus.com/articles/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953 */
+input[type="radio"]{
+    display:none;
+}
+input[type="radio"] + label {
+    display: inline-block;
+    width:19px;
+    height: 19px;
+    border: black 1px solid;
+    border-radius: 50%;
+    margin: 2px;
+    transition: 1s;
+    font-family: 'Oswald', sans-serif; 
+    line-height: 19px;
+}
+input[type="radio"]:checked + label {
+    background: #FFDD00;
+}
+input[type="radio"]:not(:checked):hover + label {
+    background: #51c1e9;
+}
+/* CHECKBOXES END */
