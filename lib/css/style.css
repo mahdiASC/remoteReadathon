@@ -33,6 +33,7 @@ hr{
 }
 span{
     font-weight: bold;
+    font-family: inherit;
 }
 
 h1,h2,h3,h4,h5{
@@ -311,7 +312,7 @@ header img{
 .popup-inner {
     max-width:700px;
     width:90%;
-    max-height: 75%;
+    max-height: 80%;
     overflow: auto;
     padding:40px;
     position:absolute;
@@ -350,8 +351,7 @@ header img{
 .popup-inner span{
     font-weight: bold;
     color: rgb(80,193,233);
-    font-size: 18px;
-    margin-right: .5em;
+    font-size: inherit;
 }
 /* Close Button */
 .popup-close {
@@ -454,5 +454,60 @@ header img{
 /* GUIDE */
 .guide-container{
     display: none;
+}
+
+.guide-container hr{
+    margin-top: 0;
+}
+
+.guide-container div{
+    border: solid #51c1e9 1px;
+    border-radius: 15px;
+    margin-top: 5px;
+    padding: 8px;
+}
+.guide-container h4{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+.guide-container table{
+    font-family: 'Oswald', sans-serif;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+.guide-container table tr td:first-child{
+    font-size: 30px;
+    color: #51c1e9;
+}
+th:first-child, td:first-child{
+    width: 10%;
+    text-align: center;
+}
+
+th:nth-child(2), td:nth-child(2){
+    width: 90%;
+}
+
+th, td{
+    border-top: #ffdd00 1px solid;
+    border-bottom: #ffdd00 1px solid;
+    padding: 4px 0;
+}
+tbody{
+    border: #ffdd00 1px solid;
+}
+table li:before {
+    color: #51c1e9;
+}
+.guide-container ul{
+    margin: 0;
+    padding-left:10px;
+    line-height: 1.2em;
+}
+
+.guide-container li{
+    font-family: 'Poppins', sans-serif;    
 }
 /* GUIDE END */
