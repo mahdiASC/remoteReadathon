@@ -6,7 +6,7 @@ body{
     overflow: hidden;
 }
 
-p,span, a{
+p, span, a{
     font-family: 'Poppins', sans-serif;
     margin:0;
 }

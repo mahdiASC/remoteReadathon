@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Poppins');
+/* font-family: 'Oswald', sans-serif; */
+/* font-family: 'Poppins', sans-serif; */
+
 @font-face {
     font-family: hacked;
     src: url(../fonts/hacked.ttf);
@@ -5,5 +9,124 @@
 
 @font-face {
     font-family: virus;
-    src: url(../fonts/viurs.ttf);
+    src: url(../fonts/virus.ttf);
 }
+
+body{
+    margin:0;
+    background-color: #0f0606;
+}
+
+h1,h2,h3,h4,h5, p, span, a, table, label{
+    margin:0;
+    color: #650000;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: "hacked", sans-serif;
+    letter-spacing: 2px;
+}
+
+p, span, a, table, label{
+    font-family: 'Poppins', sans-serif;
+}
+
+hr{
+    border: 0; 
+    height: 2px; 
+    background-image: -webkit-linear-gradient(left, #200b0b, #2f0000, #200b0b);
+    background-image: -moz-linear-gradient(left, #200b0b, #2f0000, #200b0b);
+    background-image: -ms-linear-gradient(left, #200b0b, #2f0000, #200b0b);
+    background-image: -o-linear-gradient(left, #200b0b, #2f0000, #200b0b); 
+}
+header{
+    text-align: center;
+}
+
+header h1{
+    font-size: 60px;
+    margin-top:20px;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.links a{
+    font-size: 1.4em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "virus";
+}
+
+.main-content{
+    display: flex;
+    flex-direction: row;
+    margin:15px;
+}
+
+.sidebar{
+    flex-basis: 0;
+    flex-grow: 2;
+    text-align: center;    
+}
+
+.sidebar h2{
+    text-transform: uppercase;
+    font-family: "virus";
+    font-size: 30px;
+}
+
+.display-view{
+    flex-basis: 0;
+    flex-grow: 7;
+}
+
+button{
+    background-color:#490000;
+    color: #0f0606;
+    border: #200b0b solid 1px;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    font-family: "Oswald";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.show-student{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+label{
+    text-transform: uppercase;
+    font-family: "virus";
+}
+
+input{
+    background-color:#0f0606;
+    color: #650000;
+    width: 40px;
+    border-bottom: #490000 3px solid;
+    border-top: #490000 1px solid;
+    border-right: #490000 1px solid;
+    border-left: #490000 1px solid;
+    margin: 5px 0;
+    text-align: center;    
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #650000;
+}
+/* COLOR PALETTE */
+/* #0f0606 */
+/* #200b0b */
+/* #2f0000 */
+/* #490000 */
+/* #650000 */
+/* COLOR PALETTE END*/
