@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+
+        <!-- HEADER -->
+        <header>
+            <h1>Trouble</h1>
+            <div class="links">
+                <a href="https://airtable.com/tble2d8qVMt5RkcMm" target="_blank">Airtable</a>
+                <a href="https://docs.google.com/spreadsheets/d/1gOJ3oYb4eQN_b-iU0MuonNBhyeFg6vj9m0cvqLqrbE0/edit?usp=sharing" target="_blank">User IDs</a>
+            </div>
+        </header>
+        <!-- HEADER END -->
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+                <button id="update">Update Data</button>
+                <div class="totals">
+                    <h2>Public Totals</h2>
+                    <h3>0 out of 0</h3>
+                    <p>0%</p>
+                </div>
+                <div class="real-totals">
+                    <h2>Real Totals</h2>
+                    <h3>0 out of 0</h3>
+                    <p>0%</p>
+                </div>
+                <button id="lead-button">Show Leaderboard</button>
+                <div class="show-student">
+                    <label for="studentID">Student ID</label>
+                    <input id="studentID" type="text" placeholder="###">
+                    <button id="stud-button">Show Student</button>
+                </div>
+            </div>
+            <!-- SIDEBAR END -->
+            
+            <!-- DISPLAY VIEW -->
+            <div class="display-view">
+
+                <!-- LEADERBOARD -->
+                <div class="leaderboard">
+
+                </div>
+                <!-- LEADERBOARD END -->
+
+                <!-- STUDENT INFO -->
+                <div class="student-info">
+
+                </div>
+                <!-- STUDENT INFO END -->
+            </div>
+            <!-- DISPLAY VIEW END -->
+        </div>
+        <!-- MAIN CONTENT END -->
+    </div>
+    <!-- MAIN CONTAINER END -->
+    <!-- Loading JS0 -->
+        <!--jquery-->
+        <script src="lib/js/jquery-3.1.0.js"></script>
+        <!--loading plugin-->
+        <script src="lib/js/jquery.loading.min.js"></script>
+        <script src="lib/js/loading.min.js"></script>
+    
+        <!--main files-->
+        <script src="airtable.js-master/build/airtable.browser.js"></script>
+        <script src="lib/js/user.js"></script>
+        <script src="lib/js/airtableInterface.js"></script>
+        <script src="lib/js/readathon.js"></script>
+        <script src="lib/js/trouble.js"></script>        
+</body>
+</html>

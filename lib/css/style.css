@@ -535,3 +535,12 @@ input[type="radio"]:not(:checked):hover + label {
     background: #51c1e9;
 }
 /* CHECKBOXES END */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
