@@ -39,6 +39,7 @@ hr{
     background-image: -ms-linear-gradient(left, #200b0b, #2f0000, #200b0b);
     background-image: -o-linear-gradient(left, #200b0b, #2f0000, #200b0b); 
 }
+
 header{
     text-align: center;
 }
@@ -122,6 +123,32 @@ input{
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #650000;
+}
+
+table{
+    margin: 20px;
+    width:100%;
+    border-collapse: collapse;
+}
+
+th{
+    font-family: "hacked", sans-serif;
+}
+
+tr:not(:first-child):nth-child(even){
+    background-color: #200b0b;
+}
+tr:not(:first-child){
+    border-bottom: solid #2f0000 1px;
+}
+
+tr:first-child{
+    border-bottom: solid #2f0000 3px;
+}
+
+td,th{
+    font-size: 30px;
+    text-align: center;
 }
 /* COLOR PALETTE */
 /* #0f0606 */
