@@ -96,6 +96,16 @@ button{
     font-family: "Oswald";
     font-size: 20px;
     font-weight: bold;
+    transition: .75s;
+}
+
+button:hover{
+    background-color:#0f0606;
+    color: #490000;
+}
+
+button:active, button:focus{
+    outline-color: #650000;
 }
 
 .show-student{
