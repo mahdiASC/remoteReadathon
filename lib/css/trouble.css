@@ -18,7 +18,7 @@ body{
     overflow-x: hidden;
 }
 
-h1,h2,h3,h4,h5, p, span, a, table, label{
+h1,h2,h3,h4,h5, p, span, a, table, label, li{
     margin:0;
     color: #650000;
 }
@@ -133,8 +133,13 @@ button:active, button:focus, input:active, input:focus{
     text-align: center;
 }
 
+.student-info h3{
+    font-size:26px;
+    padding: 0 30px 10px;
+}
+
 .student-info p{
-    width:75%;
+    width:90%;
     margin:0 auto;
 }
 
@@ -185,6 +190,18 @@ tr:first-child{
 td,th{
     font-size: 30px;
     text-align: center;
+}
+
+.student-info .comments{
+    font-size: 20px;
+    font-family: "Oswald"
+}
+
+ol{
+    margin: 0 auto 10px auto;
+    list-style-type: upper-roman;
+    font-family: 'Poppins', sans-serif;
+    width: 85%;
 }
 /* COLOR PALETTE */
 /* #0f0606 */
